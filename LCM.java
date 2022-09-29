@@ -1,18 +1,26 @@
 import java.util.Scanner;
-class x
+class LCM
 {
     public static void main(String args[])
     {
-        Scanner sc= new Scanner (System.in);
-        int a,b,i;
+        int a,b,max;
+        Scanner sc=new Scanner(System.in);
         a=sc.nextInt();
         b=sc.nextInt();
-        for(i=b;;i++)
+        if(a>b)
         {
-            if(i%a==0 && i%b==0)
+            max=a;
+        }
+        else
+        {
+            max=b;
+        }
+        for(;;max++)
+        {
+            if(max%a==0&&max%b==0)
             {
-            System.out.println(i);
-            break;
+                System.out.println(max);
+                break;
             }
         }
     }
